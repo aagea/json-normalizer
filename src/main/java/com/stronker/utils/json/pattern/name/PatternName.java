@@ -15,8 +15,16 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.pattern.name;
 
-public class Pattern {
+public abstract class PatternName {
+    private final String pattern;
+    public PatternName(String pattern){
+        this.pattern=pattern;
+    }
+    public abstract boolean match( String value);
 
+    public String getPattern() {
+        return pattern;
+    }
 }

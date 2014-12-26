@@ -15,16 +15,11 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.pattern.function;
 
-public abstract class PatternName {
-    private final String pattern;
-    public PatternName(String pattern){
-        this.pattern=pattern;
-    }
-    public abstract boolean match( String value);
+import com.stronker.utils.json.data.NormalizerData;
+import com.stronker.utils.json.data.ValueType;
 
-    public String getPattern() {
-        return pattern;
-    }
+public abstract class PatternFunction {
+    public abstract NormalizerData call(String name, Object object, ValueType type);
 }

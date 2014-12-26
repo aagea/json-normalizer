@@ -15,24 +15,8 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.pattern.function;
 
-public class PatternNameStrictFactory extends PatternNameFactory {
-
-    @Override
-    public PatternName getInstance(String pattern) {
-        return new PatternNameStrict(pattern);
-    }
-
-    private final class PatternNameStrict extends PatternName{
-
-        private PatternNameStrict(String pattern) {
-            super(pattern);
-        }
-
-        @Override
-        public boolean match(String value) {
-            return getPattern().equals(value);
-        }
-    }
+public abstract class PatternFunctionFactory {
+    public abstract PatternFunction getInstance();
 }

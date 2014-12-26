@@ -15,7 +15,9 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.pattern.value;
+
+import com.stronker.utils.json.data.ValueType;
 
 public class PatternValueTypeFactory extends PatternValueFactory {
 

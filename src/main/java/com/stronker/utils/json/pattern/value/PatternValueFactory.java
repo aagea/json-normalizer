@@ -15,7 +15,7 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.pattern.value;
 
 public abstract class PatternValueFactory {
     public abstract PatternValue getInstance(String pattern);

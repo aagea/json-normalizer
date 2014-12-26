@@ -15,7 +15,7 @@
  * specific language
  */
 
-package com.stronker.utils.json.patterns;
+package com.stronker.utils.json.data;
 
 
 public enum ValueType {

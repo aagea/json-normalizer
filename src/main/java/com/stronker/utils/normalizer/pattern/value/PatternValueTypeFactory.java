@@ -17,6 +17,7 @@
 
 package com.stronker.utils.normalizer.pattern.value;
 
+import com.stronker.utils.normalizer.data.ValueData;
 import com.stronker.utils.normalizer.data.ValueType;
 
 public class PatternValueTypeFactory extends PatternValueFactory {
@@ -33,9 +34,9 @@ public class PatternValueTypeFactory extends PatternValueFactory {
         }
 
         @Override
-        public boolean match(Object value, ValueType type) {
+        public boolean match(ValueData value) {
             ValueType patterValueType=ValueType.parse(getPattern());
-            return check(patterValueType,type);
+            return check(patterValueType,value.getType());
         }
 
         private boolean check(ValueType pattern, ValueType valueType) {

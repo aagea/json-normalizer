@@ -27,11 +27,7 @@ public enum ValueType {
 
     OBJECT("object",ANY),
 
-    LIST("list",ANY,ANY),
-    LIST_STRING("list[string]",LIST,STRING),
-    LIST_INT("list[int]",LIST,INT),
-    LIST_BOOLEAN("list[boolean]",LIST,BOOLEAN),
-    LIST_OBJECT("list[object]",LIST,OBJECT);
+    LIST("list",ANY,ANY);
 
 
     private final ValueType parent;

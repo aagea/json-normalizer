@@ -17,16 +17,18 @@
 
 package com.stronker.utils.normalizer.reader;
 
-import com.stronker.utils.normalizer.data.RawData;
+import com.stronker.utils.normalizer.data.ObjectData;
 
+
+import java.io.IOException;
 import java.io.Reader;
-import java.util.List;
+
 
 public abstract class RawReader {
 
     private final Reader reader;
 
-    public RawReader(Reader reader){
+    public RawReader(Reader reader) {
 
         this.reader = reader;
     }
@@ -35,7 +37,8 @@ public abstract class RawReader {
         return reader;
     }
 
-    public abstract List<RawData> getNextElement();
+    public abstract ObjectData getNextElement() throws IOException;
+
     public abstract boolean isEOF();
 
 

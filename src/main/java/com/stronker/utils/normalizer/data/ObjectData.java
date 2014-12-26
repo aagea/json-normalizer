@@ -17,20 +17,22 @@
 
 package com.stronker.utils.normalizer.data;
 
-public class RawData {
-    private final String name;
-    private final ValueData value;
+import java.util.List;
 
-    public RawData(String name, ValueData value) {
-        this.name = name;
+public class ObjectData extends ValueData {
+    private final List<RawData> value;
+
+    public ObjectData(List<RawData> value) {
         this.value = value;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public List<RawData> getValue() {
+        return value;
     }
 
-    public ValueData getValue() {
-        return value;
+    @Override
+    public ValueType getType() {
+        return ValueType.OBJECT;
     }
 }

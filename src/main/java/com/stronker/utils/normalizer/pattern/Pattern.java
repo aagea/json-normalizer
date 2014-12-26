@@ -48,7 +48,7 @@ public class Pattern {
 
     public NormalizedData apply(RawData rawData){
         NormalizedData result=null;
-        if(patternName.match(rawData.getName()) && patternValue.match(rawData.getValue(),rawData.getType())){
+        if(patternName.match(rawData.getName()) && patternValue.match(rawData.getValue())){
             result=patternFunction.call(rawData);
         }
         return result;

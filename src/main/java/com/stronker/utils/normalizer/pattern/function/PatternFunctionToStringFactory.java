@@ -15,22 +15,26 @@
  * specific language
  */
 
-package com.stronker.utils.normalizer.data;
+package com.stronker.utils.normalizer.pattern.function;
 
-public class RawData {
-    private final String name;
-    private final ValueData value;
+import com.stronker.utils.normalizer.data.NormalizedData;
+import com.stronker.utils.normalizer.data.RawData;
 
-    public RawData(String name, ValueData value) {
-        this.name = name;
-        this.value = value;
+public class PatternFunctionToStringFactory extends PatternFunctionFactory {
+    @Override
+    public PatternFunction getInstance() {
+        return new PatternFunctionToString();
     }
 
-    public String getName() {
-        return name;
+    private final class PatternFunctionToString extends PatternFunction{
+        private PatternFunctionToString(){
+
+        }
+
+        @Override
+        public NormalizedData call(RawData rawData) {
+            return new NormalizedData(rawData.getName(),rawData.getValue().toString());
+        }
     }
 
-    public ValueData getValue() {
-        return value;
-    }
 }

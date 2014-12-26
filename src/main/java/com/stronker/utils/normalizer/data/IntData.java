@@ -15,8 +15,22 @@
  * specific language
  */
 
-package com.stronker.utils.normalizer;
+package com.stronker.utils.normalizer.data;
 
-public class EOFException extends RuntimeException {
+public class IntData extends ValueData {
+    private final Integer value;
 
+    public IntData(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public Integer getValue() {
+        return value;
+    }
+
+    @Override
+    public ValueType getType() {
+        return ValueType.INT;
+    }
 }

@@ -17,20 +17,7 @@
 
 package com.stronker.utils.normalizer.data;
 
-public class RawData {
-    private final String name;
-    private final ValueData value;
-
-    public RawData(String name, ValueData value) {
-        this.name = name;
-        this.value = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public ValueData getValue() {
-        return value;
-    }
+public abstract class ValueData {
+    public abstract Object getValue();
+    public abstract ValueType getType();
 }

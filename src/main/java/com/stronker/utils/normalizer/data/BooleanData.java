@@ -17,20 +17,20 @@
 
 package com.stronker.utils.normalizer.data;
 
-public class RawData {
-    private final String name;
-    private final ValueData value;
+public class BooleanData extends ValueData {
+    private final Boolean value;
 
-    public RawData(String name, ValueData value) {
-        this.name = name;
+    public BooleanData(Boolean value) {
         this.value = value;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public Boolean getValue() {
+        return null;
     }
 
-    public ValueData getValue() {
-        return value;
+    @Override
+    public ValueType getType() {
+        return ValueType.BOOLEAN;
     }
 }

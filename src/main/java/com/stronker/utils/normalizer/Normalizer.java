@@ -19,10 +19,13 @@ package com.stronker.utils.normalizer;
 
 
 import com.stronker.utils.normalizer.data.NormalizedData;
+import com.stronker.utils.normalizer.data.ObjectData;
 import com.stronker.utils.normalizer.data.RawData;
 import com.stronker.utils.normalizer.pattern.Pattern;
 import com.stronker.utils.normalizer.reader.RawReader;
 
+import java.io.EOFException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,21 +49,21 @@ public class Normalizer {
     }
 
 
-    public Map<String,String> getNext(){
-        Map<String,String> result=null;
+    public Map<String,String> getNext() throws IOException{
+        Map<String,String> result;
         if(reader.isEOF()){
             throw new EOFException();
         }else {
-            List<RawData> element = reader.getNextElement();
+            ObjectData element = reader.getNextElement();
             result=normalize(element);
         }
 
         return result;
     }
 
-    private Map<String,String> normalize(List<RawData> element){
+    private Map<String,String> normalize(ObjectData element){
         Map<String,String> result=new HashMap<String, String>();
-        for (RawData rawData:element){
+        for (RawData rawData:element.getValue()){
             NormalizedData data=normalize(rawData);
             if(data!=null){
                 result.put(data.getKey(),data.getValue());

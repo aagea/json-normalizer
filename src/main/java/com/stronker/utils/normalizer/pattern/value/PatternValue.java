@@ -17,7 +17,7 @@
 
 package com.stronker.utils.normalizer.pattern.value;
 
-import com.stronker.utils.normalizer.data.ValueType;
+import com.stronker.utils.normalizer.data.ValueData;
 
 public abstract class PatternValue {
     private final String pattern;
@@ -26,7 +26,7 @@ public abstract class PatternValue {
 
         this.pattern = pattern;
     }
-    public abstract boolean match( Object value, ValueType type);
+    public abstract boolean match( ValueData value);
 
     public String getPattern() {
         return pattern;

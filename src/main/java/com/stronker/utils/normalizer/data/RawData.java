@@ -15,16 +15,28 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern.name;
+package com.stronker.utils.normalizer.data;
 
-public abstract class PatternName {
-    private final String pattern;
-    public PatternName(String pattern){
-        this.pattern=pattern;
+public class RawData {
+    private final String name;
+    private final Object value;
+    private final ValueType type;
+
+    public RawData(String name, Object value, ValueType type) {
+        this.name = name;
+        this.value = value;
+        this.type = type;
     }
-    public abstract boolean match( String value);
 
-    public String getPattern() {
-        return pattern;
+    public String getName() {
+        return name;
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
+    public ValueType getType() {
+        return type;
     }
 }

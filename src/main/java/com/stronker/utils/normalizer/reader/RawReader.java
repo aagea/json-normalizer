@@ -15,20 +15,28 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern.value;
+package com.stronker.utils.normalizer.reader;
 
-import com.stronker.utils.json.data.ValueType;
+import com.stronker.utils.normalizer.data.RawData;
 
-public abstract class PatternValue {
-    private final String pattern;
+import java.io.Reader;
+import java.util.List;
 
-    public PatternValue(String pattern){
+public abstract class RawReader {
 
-        this.pattern = pattern;
+    private final Reader reader;
+
+    public RawReader(Reader reader){
+
+        this.reader = reader;
     }
-    public abstract boolean match( Object value, ValueType type);
 
-    public String getPattern() {
-        return pattern;
+    public Reader getReader() {
+        return reader;
     }
+
+    public abstract List<RawData> getNextElement();
+    public abstract boolean isEOF();
+
+
 }

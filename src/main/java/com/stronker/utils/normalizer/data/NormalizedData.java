@@ -15,32 +15,24 @@
  * specific language
  */
 
-package com.stronker.utils.json;
+package com.stronker.utils.normalizer.data;
 
 
-import java.io.Reader;
-import java.io.StringReader;
+public class NormalizedData {
+    private final String key;
+    private final String value;
 
-public class Normalizer {
-    private final Reader reader;
-    private final NormalizerConfiguration configuration;
+    public NormalizedData(String key, String value){
 
-    public Normalizer(String json, NormalizerConfiguration configuration){
-        this(new StringReader(json),configuration);
-
+        this.key = key;
+        this.value = value;
     }
 
-    public Normalizer(Reader reader, NormalizerConfiguration configuration){
-        this.reader=reader;
-        this.configuration=configuration;
-
+    public String getKey() {
+        return key;
     }
 
-    public Reader getReader() {
-        return reader;
-    }
-
-    public NormalizerConfiguration getConfiguration() {
-        return configuration;
+    public String getValue() {
+        return value;
     }
 }

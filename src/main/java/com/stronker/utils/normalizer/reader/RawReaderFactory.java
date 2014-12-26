@@ -15,8 +15,10 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern.name;
+package com.stronker.utils.normalizer.reader;
 
-public abstract class PatternNameFactory {
-    public abstract PatternName getInstance(String pattern);
+import java.io.Reader;
+
+public abstract class RawReaderFactory {
+    public abstract RawReader getInstance(Reader reader);
 }

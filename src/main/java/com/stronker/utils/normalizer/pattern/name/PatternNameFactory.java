@@ -15,8 +15,8 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern.function;
+package com.stronker.utils.normalizer.pattern.name;
 
-public abstract class PatternFunctionFactory {
-    public abstract PatternFunction getInstance();
+public abstract class PatternNameFactory {
+    public abstract PatternName getInstance(String pattern);
 }

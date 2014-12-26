@@ -15,10 +15,28 @@
  * specific language
  */
 
-package com.stronker.utils.json;
+package com.stronker.utils.normalizer;
+
+import com.stronker.utils.normalizer.pattern.Pattern;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NormalizerConfiguration {
-    private JsonTopLevelType topLevelType=JsonTopLevelType.ARRAY;
 
+    private final List<Pattern> patterns=new ArrayList<Pattern>();
 
+    public NormalizerConfiguration() {
+        this(null);
+    }
+
+    public NormalizerConfiguration(List<Pattern> patterns) {
+        if(patterns!=null && patterns.size()>0) {
+            this.patterns.addAll(patterns);
+        }
+    }
+
+    public List<Pattern> getPatterns() {
+        return patterns;
+    }
 }

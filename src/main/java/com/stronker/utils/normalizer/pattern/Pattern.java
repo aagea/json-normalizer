@@ -15,13 +15,13 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern;
+package com.stronker.utils.normalizer.pattern;
 
-import com.stronker.utils.json.data.NormalizerData;
-import com.stronker.utils.json.data.ValueType;
-import com.stronker.utils.json.pattern.function.PatternFunction;
-import com.stronker.utils.json.pattern.name.PatternName;
-import com.stronker.utils.json.pattern.value.PatternValue;
+import com.stronker.utils.normalizer.data.NormalizedData;
+import com.stronker.utils.normalizer.data.RawData;
+import com.stronker.utils.normalizer.pattern.function.PatternFunction;
+import com.stronker.utils.normalizer.pattern.name.PatternName;
+import com.stronker.utils.normalizer.pattern.value.PatternValue;
 
 public class Pattern {
     private final PatternName patternName;
@@ -46,10 +46,10 @@ public class Pattern {
         return patternFunction;
     }
 
-    public NormalizerData apply(String name, Object value, ValueType valueType){
-        NormalizerData result=null;
-        if(patternName.match(name) && patternValue.match(value,valueType)){
-            result=patternFunction.call(name,value,valueType);
+    public NormalizedData apply(RawData rawData){
+        NormalizedData result=null;
+        if(patternName.match(rawData.getName()) && patternValue.match(rawData.getValue(),rawData.getType())){
+            result=patternFunction.call(rawData);
         }
         return result;
     }

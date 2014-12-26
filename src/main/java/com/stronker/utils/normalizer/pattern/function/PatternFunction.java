@@ -15,11 +15,11 @@
  * specific language
  */
 
-package com.stronker.utils.json.pattern.function;
+package com.stronker.utils.normalizer.pattern.function;
 
-import com.stronker.utils.json.data.NormalizerData;
-import com.stronker.utils.json.data.ValueType;
+import com.stronker.utils.normalizer.data.NormalizedData;
+import com.stronker.utils.normalizer.data.RawData;
 
 public abstract class PatternFunction {
-    public abstract NormalizerData call(String name, Object object, ValueType type);
+    public abstract NormalizedData call(RawData rawData);
 }

@@ -19,47 +19,49 @@ package com.stronker.utils.normalizer.data;
 
 
 public enum ValueType {
-    ANY("any",null),
-    SIMPLE_TYPE("simple-type",ANY),
-    STRING("string",SIMPLE_TYPE),
-    INT("int",SIMPLE_TYPE),
-    BOOLEAN("boolean",SIMPLE_TYPE),
+    ANY("any", null),
+    SIMPLE_TYPE("simple-type", ANY),
+    STRING("string", SIMPLE_TYPE),
+    INT("int", SIMPLE_TYPE),
+    BOOLEAN("boolean", SIMPLE_TYPE),
 
-    OBJECT("object",ANY),
+    OBJECT("object", ANY),
 
-    LIST("list",ANY,ANY);
+    LIST("list", ANY, ANY);
 
 
     private final ValueType parent;
     private final ValueType generic;
     private final String signature;
 
-    ValueType( String signature,ValueType parent) {
-        this(signature,parent,null);
-    }
-    ValueType(String signature,ValueType parent,ValueType generic){
-        this.signature=signature;
-        this.parent=parent;
-        this.generic=generic;
+    ValueType(String signature, ValueType parent) {
+        this(signature, parent, null);
     }
 
-    public ValueType getParent() {
-        return parent;
+    ValueType(String signature, ValueType parent, ValueType generic) {
+        this.signature = signature;
+        this.parent = parent;
+        this.generic = generic;
     }
 
-    public ValueType getGeneric() {
-        return generic;
-    }
-
-    public String getSignature() {
-        return signature;
-    }
-    public static ValueType parse(String signature){
-        for(ValueType valueType: ValueType.values()){
-            if (valueType.signature.equals(signature)){
+    public static ValueType parse(String signature) {
+        for (ValueType valueType : ValueType.values()) {
+            if (valueType.getSignature().equals(signature)) {
                 return valueType;
             }
         }
         throw new IllegalArgumentException("This signature doesn't exists");
+    }
+
+    public ValueType getParent() {
+        return this.parent;
+    }
+
+    public ValueType getGeneric() {
+        return this.generic;
+    }
+
+    public String getSignature() {
+        return this.signature;
     }
 }

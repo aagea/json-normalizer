@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="0" timestamp="1419877643000" analysisTimestamp="1419877658365" release="">
+  <Project>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/Normalizer.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/NormalizerConfiguration.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/AbstractNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/BooleanNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/INormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/IntNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/ListNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/NormalizedData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/ObjectNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/RawData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/StringNormalData.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/data/ValueType.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/IPattern.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/Pattern.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/function/IPatternFunction.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/function/IPatternFunctionFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/function/ToStringPatternFunctionFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/function/ToStringPatternFunctionFactory$ToStringPatternFunction.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/name/AbstractPatternName.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/name/IPatternName.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/name/IPatternNameFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/name/StrictPatternNameFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/name/StrictPatternNameFactory$StrictPatternName.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/value/AbstractPatternValue.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/value/CompareTypePatternValueFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/value/CompareTypePatternValueFactory$CompareTypePatternValue.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/value/IPatternValue.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/pattern/value/IPatternValueFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/reader/AbstractRawReader.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/reader/IRawReader.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/reader/IRawReaderFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/reader/JsonArrayRawReaderFactory.class</Jar>
+    <Jar>/Users/strands/develop/json-normalizer/target/classes/com/stronker/utils/normalizer/reader/JsonArrayRawReaderFactory$JsonArrayRawReader.class</Jar>
+    <AuxClasspathEntry>/Users/strands/develop/json-normalizer/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/strands/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/strands/.m2/repository/org/slf4j/slf4j-api/1.7.9/slf4j-api-1.7.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/strands/develop/json-normalizer/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/strands/develop/json-normalizer/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
+    <SrcDir>/Users/strands/develop/json-normalizer/src/main/java</SrcDir>
+    <WrkDir>/Users/strands/develop/json-normalizer/target</WrkDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 29 Dec 2014 19:27:23 +0100" total_classes="33" referenced_classes="69" total_bugs="0" total_size="384" num_packages="7" java_version="1.7.0_71" vm_version="24.71-b01" cpu_seconds="15.05" clock_seconds="5.28" peak_mbytes="749.91" alloc_mbytes="3641.00" gc_seconds="0.00">
+    <FileStats path="com/stronker/utils/normalizer/Normalizer.java" bugCount="0" size="39"/>
+    <FileStats path="com/stronker/utils/normalizer/NormalizerConfiguration.java" bugCount="0" size="16"/>
+    <FileStats path="com/stronker/utils/normalizer/data/AbstractNormalData.java" bugCount="0" size="7"/>
+    <FileStats path="com/stronker/utils/normalizer/data/BooleanNormalData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/INormalData.java" bugCount="0" size="3"/>
+    <FileStats path="com/stronker/utils/normalizer/data/IntNormalData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/ListNormalData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/NormalizedData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/ObjectNormalData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/RawData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/StringNormalData.java" bugCount="0" size="12"/>
+    <FileStats path="com/stronker/utils/normalizer/data/ValueType.java" bugCount="0" size="43"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/IPattern.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/Pattern.java" bugCount="0" size="21"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/function/IPatternFunction.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/function/IPatternFunctionFactory.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/function/ToStringPatternFunctionFactory.java" bugCount="0" size="14"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/name/AbstractPatternName.java" bugCount="0" size="9"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/name/IPatternName.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/name/IPatternNameFactory.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/name/StrictPatternNameFactory.java" bugCount="0" size="14"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/value/AbstractPatternValue.java" bugCount="0" size="9"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/value/CompareTypePatternValueFactory.java" bugCount="0" size="15"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/value/IPatternValue.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/pattern/value/IPatternValueFactory.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/reader/AbstractRawReader.java" bugCount="0" size="10"/>
+    <FileStats path="com/stronker/utils/normalizer/reader/IRawReader.java" bugCount="0" size="3"/>
+    <FileStats path="com/stronker/utils/normalizer/reader/IRawReaderFactory.java" bugCount="0" size="2"/>
+    <FileStats path="com/stronker/utils/normalizer/reader/JsonArrayRawReaderFactory.java" bugCount="0" size="81"/>
+    <PackageStats package="com.stronker.utils.normalizer" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="com.stronker.utils.normalizer.Normalizer" sourceFile="Normalizer.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.NormalizerConfiguration" sourceFile="NormalizerConfiguration.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.data" total_bugs="0" total_types="10" total_size="137">
+      <ClassStats class="com.stronker.utils.normalizer.data.AbstractNormalData" sourceFile="AbstractNormalData.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.BooleanNormalData" sourceFile="BooleanNormalData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.INormalData" sourceFile="INormalData.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.IntNormalData" sourceFile="IntNormalData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.ListNormalData" sourceFile="ListNormalData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.NormalizedData" sourceFile="NormalizedData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.ObjectNormalData" sourceFile="ObjectNormalData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.RawData" sourceFile="RawData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.StringNormalData" sourceFile="StringNormalData.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.data.ValueType" sourceFile="ValueType.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.pattern" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.stronker.utils.normalizer.pattern.IPattern" sourceFile="IPattern.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.Pattern" sourceFile="Pattern.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.pattern.function" total_bugs="0" total_types="4" total_size="18">
+      <ClassStats class="com.stronker.utils.normalizer.pattern.function.IPatternFunction" sourceFile="IPatternFunction.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.function.IPatternFunctionFactory" sourceFile="IPatternFunctionFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.function.ToStringPatternFunctionFactory" sourceFile="ToStringPatternFunctionFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.function.ToStringPatternFunctionFactory$ToStringPatternFunction" sourceFile="ToStringPatternFunctionFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.pattern.name" total_bugs="0" total_types="5" total_size="27">
+      <ClassStats class="com.stronker.utils.normalizer.pattern.name.AbstractPatternName" sourceFile="AbstractPatternName.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.name.IPatternName" sourceFile="IPatternName.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.name.IPatternNameFactory" sourceFile="IPatternNameFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.name.StrictPatternNameFactory" sourceFile="StrictPatternNameFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.name.StrictPatternNameFactory$StrictPatternName" sourceFile="StrictPatternNameFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.pattern.value" total_bugs="0" total_types="5" total_size="28">
+      <ClassStats class="com.stronker.utils.normalizer.pattern.value.AbstractPatternValue" sourceFile="AbstractPatternValue.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.value.CompareTypePatternValueFactory" sourceFile="CompareTypePatternValueFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.value.CompareTypePatternValueFactory$CompareTypePatternValue" sourceFile="CompareTypePatternValueFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.value.IPatternValue" sourceFile="IPatternValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.pattern.value.IPatternValueFactory" sourceFile="IPatternValueFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.stronker.utils.normalizer.reader" total_bugs="0" total_types="5" total_size="96">
+      <ClassStats class="com.stronker.utils.normalizer.reader.AbstractRawReader" sourceFile="AbstractRawReader.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.reader.IRawReader" sourceFile="IRawReader.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.reader.IRawReaderFactory" sourceFile="IRawReaderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactory" sourceFile="JsonArrayRawReaderFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactory$JsonArrayRawReader" sourceFile="JsonArrayRawReaderFactory.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="700" invocations="398" avgMicrosecondsPerInvocation="1760" maxMicrosecondsPerInvocation="33891" standardDeviationMircosecondsPerInvocation="4059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="293" invocations="253" avgMicrosecondsPerInvocation="1159" maxMicrosecondsPerInvocation="9985" standardDeviationMircosecondsPerInvocation="1429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="286" invocations="69" avgMicrosecondsPerInvocation="4149" maxMicrosecondsPerInvocation="48331" standardDeviationMircosecondsPerInvocation="9990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="110" invocations="84" avgMicrosecondsPerInvocation="1318" maxMicrosecondsPerInvocation="16718" standardDeviationMircosecondsPerInvocation="2596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="105" invocations="84" avgMicrosecondsPerInvocation="1251" maxMicrosecondsPerInvocation="16567" standardDeviationMircosecondsPerInvocation="2592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="95" invocations="84" avgMicrosecondsPerInvocation="1135" maxMicrosecondsPerInvocation="13436" standardDeviationMircosecondsPerInvocation="2157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="94" invocations="69" avgMicrosecondsPerInvocation="1374" maxMicrosecondsPerInvocation="17544" standardDeviationMircosecondsPerInvocation="3119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="88" invocations="79" avgMicrosecondsPerInvocation="1115" maxMicrosecondsPerInvocation="14033" standardDeviationMircosecondsPerInvocation="2116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="84" invocations="79" avgMicrosecondsPerInvocation="1068" maxMicrosecondsPerInvocation="14048" standardDeviationMircosecondsPerInvocation="2003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="82" invocations="142" avgMicrosecondsPerInvocation="579" maxMicrosecondsPerInvocation="21896" standardDeviationMircosecondsPerInvocation="1982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="79" invocations="364" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2908" standardDeviationMircosecondsPerInvocation="411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="411" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="738" standardDeviationMircosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="71" invocations="69" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="19548" standardDeviationMircosecondsPerInvocation="2911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="67" invocations="86" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="16339" standardDeviationMircosecondsPerInvocation="1882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="66" invocations="69" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="18707" standardDeviationMircosecondsPerInvocation="3898"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="62" invocations="102" avgMicrosecondsPerInvocation="611" maxMicrosecondsPerInvocation="48639" standardDeviationMircosecondsPerInvocation="4782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="60" invocations="69" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="11414" standardDeviationMircosecondsPerInvocation="2067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="60" invocations="69" avgMicrosecondsPerInvocation="875" maxMicrosecondsPerInvocation="9511" standardDeviationMircosecondsPerInvocation="1949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="56" invocations="69" avgMicrosecondsPerInvocation="822" maxMicrosecondsPerInvocation="7870" standardDeviationMircosecondsPerInvocation="1471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="53" invocations="57" avgMicrosecondsPerInvocation="930" maxMicrosecondsPerInvocation="9221" standardDeviationMircosecondsPerInvocation="1492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="50" invocations="7795" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="62" standardDeviationMircosecondsPerInvocation="4"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectMethodsReturningImmutableCollections" totalMilliseconds="45" invocations="69" avgMicrosecondsPerInvocation="656" maxMicrosecondsPerInvocation="9529" standardDeviationMircosecondsPerInvocation="1543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="41" invocations="69" avgMicrosecondsPerInvocation="605" maxMicrosecondsPerInvocation="6982" standardDeviationMircosecondsPerInvocation="1373"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectStatistics" totalMilliseconds="39" invocations="69" avgMicrosecondsPerInvocation="570" maxMicrosecondsPerInvocation="12013" standardDeviationMircosecondsPerInvocation="1640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="38" invocations="69" avgMicrosecondsPerInvocation="557" maxMicrosecondsPerInvocation="10868" standardDeviationMircosecondsPerInvocation="1636"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.FinalParameters" totalMilliseconds="37" invocations="33" avgMicrosecondsPerInvocation="1129" maxMicrosecondsPerInvocation="9868" standardDeviationMircosecondsPerInvocation="1948"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="36" invocations="84" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="4271" standardDeviationMircosecondsPerInvocation="664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="27" invocations="76" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="4226" standardDeviationMircosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteCheckReturnValueAnnotations" totalMilliseconds="16" invocations="69" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="2826" standardDeviationMircosecondsPerInvocation="548"/>
+      <ClassProfile name="com.mebigfatguy.fbcontrib.detect.ImproperPropertiesUse" totalMilliseconds="16" invocations="33" avgMicrosecondsPerInvocation="488" maxMicrosecondsPerInvocation="9812" standardDeviationMircosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteSuppressedWarnings" totalMilliseconds="15" invocations="69" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="2918" standardDeviationMircosecondsPerInvocation="460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteAnnotationRetention" totalMilliseconds="15" invocations="69" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="3451" standardDeviationMircosecondsPerInvocation="523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="33" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="6834" standardDeviationMircosecondsPerInvocation="1172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteJCIPAnnotation" totalMilliseconds="15" invocations="69" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2666" standardDeviationMircosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="14" invocations="12" avgMicrosecondsPerInvocation="1232" maxMicrosecondsPerInvocation="5404" standardDeviationMircosecondsPerInvocation="1504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="14" invocations="33" avgMicrosecondsPerInvocation="430" maxMicrosecondsPerInvocation="2962" standardDeviationMircosecondsPerInvocation="643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="33" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="1986" standardDeviationMircosecondsPerInvocation="531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="13" invocations="33" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="9213" standardDeviationMircosecondsPerInvocation="1687"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

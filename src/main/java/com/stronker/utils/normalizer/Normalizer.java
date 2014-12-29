@@ -19,67 +19,93 @@ package com.stronker.utils.normalizer;
 
 
 import com.stronker.utils.normalizer.data.NormalizedData;
-import com.stronker.utils.normalizer.data.ObjectData;
+import com.stronker.utils.normalizer.data.ObjectNormalData;
 import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.pattern.Pattern;
-import com.stronker.utils.normalizer.reader.RawReader;
+import com.stronker.utils.normalizer.pattern.IPattern;
+import com.stronker.utils.normalizer.reader.IRawReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class Normalizer {
-    private final RawReader reader;
+/**
+ * Main class to normalize documents.
+ */
+public final class Normalizer {
+    private static final Logger LOG= LoggerFactory.getLogger(Normalizer.class);
+
+    private final IRawReader reader;
     private final NormalizerConfiguration configuration;
 
-    public Normalizer(RawReader reader, NormalizerConfiguration configuration){
-        this.reader=reader;
-        this.configuration=configuration;
+    /**
+     * Create a new Normalizer using a reader and a configuration.
+     *
+     * @param reader        Object that extract ObjectData.
+     * @param configuration Basic configuration.
+     */
+    public Normalizer(IRawReader reader, NormalizerConfiguration configuration) {
+        this.reader = reader;
+        this.configuration = configuration;
 
     }
 
-    public RawReader getReader() {
-        return reader;
+    /**
+     * Get the reader instance.
+     *
+     * @return Reader instance.
+     */
+    public IRawReader getReader() {
+        return this.reader;
     }
 
+    /**
+     * Get the configuration.
+     *
+     * @return Configuration instance.
+     */
     public NormalizerConfiguration getConfiguration() {
-        return configuration;
+        return this.configuration;
     }
 
-
-    public Map<String,String> getNext() throws IOException{
-        Map<String,String> result;
-        if(reader.isEOF()){
+    /**
+     * Normalize an object and return her information.
+     *
+     * @return A map with the information normalize.
+     * @throws IOException Inherit exception.
+     */
+    public Map<String, String> getNext() throws IOException {
+        if (this.reader.isEOF()) {
+            LOG.error("You release the reader [EOFException].");
             throw new EOFException();
-        }else {
-            ObjectData element = reader.getNextElement();
-            result=normalize(element);
         }
-
-        return result;
+        LOG.debug("---> Get next element.");
+        final ObjectNormalData element = this.reader.getNextElement();
+        return this.normalize(element);
     }
 
-    private Map<String,String> normalize(ObjectData element){
-        Map<String,String> result=new HashMap<String, String>();
-        for (RawData rawData:element.getValue()){
-            NormalizedData data=normalize(rawData);
-            if(data!=null){
-                result.put(data.getKey(),data.getValue());
+    private Map<String, String> normalize(ObjectNormalData element) {
+        final Map<String, String> result = new HashMap<String, String>(element.getValue().size());
+        for (RawData rawData : element.getValue()) {
+            final NormalizedData data = this.normalize(rawData);
+            if (data != null) {
+                result.put(data.getKey(), data.getValue());
             }
         }
+        LOG.debug("Result: {} Processed: {}",result.size(),element.getValue().size());
         return result;
     }
 
-    private NormalizedData normalize(RawData data){
-        NormalizedData result=null;
-        for(Pattern pattern: configuration.getPatterns()){
-            result=pattern.apply(data);
-            if(data!=null){
+    private NormalizedData normalize(RawData data) {
+        NormalizedData result = null;
+        for (IPattern pattern : this.configuration.getPatterns()) {
+            result = pattern.apply(data);
+            if (result != null) {
                 break;
             }
         }
-        return  result;
+        return result;
     }
 }

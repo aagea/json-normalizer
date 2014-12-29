@@ -17,20 +17,20 @@
 
 package com.stronker.utils.normalizer.data;
 
-public class RawData {
+public final class RawData {
     private final String name;
-    private final ValueData value;
+    private final INormalData value;
 
-    public RawData(String name, ValueData value) {
+    public RawData(String name, INormalData value) {
         this.name = name;
         this.value = value;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public ValueData getValue() {
-        return value;
+    public INormalData getValue() {
+        return this.value;
     }
 }

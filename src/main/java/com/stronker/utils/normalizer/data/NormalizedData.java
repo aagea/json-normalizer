@@ -18,21 +18,21 @@
 package com.stronker.utils.normalizer.data;
 
 
-public class NormalizedData {
+public final class NormalizedData {
     private final String key;
     private final String value;
 
-    public NormalizedData(String key, String value){
+    public NormalizedData(String key, String value) {
 
         this.key = key;
         this.value = value;
     }
 
     public String getKey() {
-        return key;
+        return this.key;
     }
 
     public String getValue() {
-        return value;
+        return this.value;
     }
 }

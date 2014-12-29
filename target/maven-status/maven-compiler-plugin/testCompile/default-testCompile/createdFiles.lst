@@ -1,0 +1,4 @@
+com/stronker/utils/normalizer/reader/RawReaderMock.class
+com/stronker/utils/normalizer/pattern/PatternMock.class
+com/stronker/utils/normalizer/reader/JsonArrayRawReaderFactoryTest.class
+com/stronker/utils/normalizer/NormalizerTest.class

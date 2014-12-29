@@ -17,26 +17,49 @@
 
 package com.stronker.utils.normalizer;
 
-import com.stronker.utils.normalizer.pattern.Pattern;
+import com.stronker.utils.normalizer.pattern.IPattern;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class NormalizerConfiguration {
+/**
+ * Basic configuration to normalizer.
+ */
+public final class NormalizerConfiguration {
 
-    private final List<Pattern> patterns=new ArrayList<Pattern>();
+    private final List<IPattern> patterns = new ArrayList<IPattern>();
 
+    /**
+     * Create an empty configuration.
+     */
     public NormalizerConfiguration() {
-        this(null);
+        this(new ArrayList<IPattern>());
     }
 
-    public NormalizerConfiguration(List<Pattern> patterns) {
-        if(patterns!=null && patterns.size()>0) {
+    /**
+     * Define a configuration with a pattern list.
+     * @param patterns Pattern list.
+     */
+    public NormalizerConfiguration(IPattern... patterns) {
+        this(Arrays.asList(patterns));
+    }
+
+    /**
+     * Define a configuration with a pattern list.
+     * @param patterns Pattern list.
+     */
+    public NormalizerConfiguration(List<IPattern> patterns) {
+        if (patterns != null && !patterns.isEmpty()) {
             this.patterns.addAll(patterns);
         }
     }
 
-    public List<Pattern> getPatterns() {
-        return patterns;
+    /**
+     * Instance of pattern list.
+     * @return Pattern list.
+     */
+    public List<IPattern> getPatterns() {
+        return this.patterns;
     }
 }

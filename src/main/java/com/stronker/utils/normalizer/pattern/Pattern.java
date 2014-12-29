@@ -19,37 +19,38 @@ package com.stronker.utils.normalizer.pattern;
 
 import com.stronker.utils.normalizer.data.NormalizedData;
 import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.pattern.function.PatternFunction;
-import com.stronker.utils.normalizer.pattern.name.PatternName;
-import com.stronker.utils.normalizer.pattern.value.PatternValue;
+import com.stronker.utils.normalizer.pattern.function.IPatternFunction;
+import com.stronker.utils.normalizer.pattern.name.IPatternName;
+import com.stronker.utils.normalizer.pattern.value.IPatternValue;
 
-public class Pattern {
-    private final PatternName patternName;
-    private final PatternValue patternValue;
-    private final PatternFunction patternFunction;
+public class Pattern implements IPattern {
+    private final IPatternName patternName;
+    private final IPatternValue patternValue;
+    private final IPatternFunction patternFunction;
 
-    public Pattern(PatternName patternName, PatternValue patternValue, PatternFunction patternFunction) {
+    public Pattern(IPatternName patternName, IPatternValue patternValue, IPatternFunction patternFunction) {
         this.patternName = patternName;
         this.patternValue = patternValue;
         this.patternFunction = patternFunction;
     }
 
-    public PatternName getPatternName() {
-        return patternName;
+    public IPatternName getPatternName() {
+        return this.patternName;
     }
 
-    public PatternValue getPatternValue() {
-        return patternValue;
+    public IPatternValue getPatternValue() {
+        return this.patternValue;
     }
 
-    public PatternFunction getPatternFunction() {
-        return patternFunction;
+    public IPatternFunction getPatternFunction() {
+        return this.patternFunction;
     }
 
-    public NormalizedData apply(RawData rawData){
-        NormalizedData result=null;
-        if(patternName.match(rawData.getName()) && patternValue.match(rawData.getValue())){
-            result=patternFunction.call(rawData);
+    @Override
+    public NormalizedData apply(RawData rawData) {
+        NormalizedData result = null;
+        if (this.patternName.match(rawData.getName()) && this.patternValue.match(rawData.getValue())) {
+            result = this.patternFunction.call(rawData);
         }
         return result;
     }

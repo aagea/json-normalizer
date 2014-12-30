@@ -39,6 +39,7 @@ public final class NormalizerConfiguration {
 
     /**
      * Define a configuration with a pattern list.
+     *
      * @param patterns Pattern list.
      */
     public NormalizerConfiguration(IPattern... patterns) {
@@ -47,6 +48,7 @@ public final class NormalizerConfiguration {
 
     /**
      * Define a configuration with a pattern list.
+     *
      * @param patterns Pattern list.
      */
     public NormalizerConfiguration(List<IPattern> patterns) {
@@ -57,6 +59,7 @@ public final class NormalizerConfiguration {
 
     /**
      * Instance of pattern list.
+     *
      * @return Pattern list.
      */
     public List<IPattern> getPatterns() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.029" errors="0" skipped="0" tests="2" name="com.stronker.utils.normalizer.NormalizerTest">
+<testsuite failures="0" time="0.024" errors="0" skipped="0" tests="4" name="com.stronker.utils.normalizer.NormalizerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib"/>
@@ -67,6 +67,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.024" classname="com.stronker.utils.normalizer.NormalizerTest" name="instanceNormalizerTest"/>
-  <testcase time="0.005" classname="com.stronker.utils.normalizer.NormalizerTest" name="simpleGetNext"/>
+  <testcase time="0.023" classname="com.stronker.utils.normalizer.NormalizerTest" name="eofTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.NormalizerTest" name="simpleGetNextTest"/>
+  <testcase time="0.001" classname="com.stronker.utils.normalizer.NormalizerTest" name="nullPatternTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.NormalizerTest" name="instanceNormalizerTest"/>
 </testsuite>

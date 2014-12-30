@@ -17,9 +17,8 @@
 
 package com.stronker.utils.normalizer.reader;
 
-import com.stronker.utils.normalizer.data.ObjectNormalData;
+import com.stronker.utils.normalizer.data.ObjectElement;
 import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.reader.IRawReader;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -28,16 +27,16 @@ import java.util.List;
 
 public class RawReaderMock implements IRawReader {
 
-    private List<ObjectNormalData> objects;
+    private List<ObjectElement> objects;
     private int index;
 
     public RawReaderMock() {
-        this.objects = new LinkedList<ObjectNormalData>();
+        this.objects = new LinkedList<ObjectElement>();
     }
 
     @Override
-    public ObjectNormalData getNextElement() throws IOException {
-        ObjectNormalData result = null;
+    public ObjectElement getNextElement() throws IOException {
+        ObjectElement result = null;
         if (index < objects.size()) {
             result = this.objects.get(index++);
         }
@@ -57,11 +56,11 @@ public class RawReaderMock implements IRawReader {
         this.index = index;
     }
 
-    public void add(RawData ... data){
-        this.add(new ObjectNormalData(Arrays.asList(data)));
+    public void add(RawData... data) {
+        this.add(new ObjectElement(Arrays.asList(data)));
     }
 
-    public void add(ObjectNormalData object){
+    public void add(ObjectElement object) {
         objects.add(object);
     }
 }

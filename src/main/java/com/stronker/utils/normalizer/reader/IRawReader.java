@@ -17,13 +17,25 @@
 
 package com.stronker.utils.normalizer.reader;
 
-import com.stronker.utils.normalizer.data.ObjectNormalData;
+import com.stronker.utils.normalizer.data.ObjectElement;
 
 import java.io.IOException;
 
+/**
+ * Interface for creating new object element reader.
+ */
 public interface IRawReader {
 
-    ObjectNormalData getNextElement() throws IOException;
+    /**
+     * Recovery new ObjectElement for different formats.
+     * @return New Object element.
+     * @throws IOException Problems with the source.
+     */
+    ObjectElement getNextElement() throws IOException;
 
+    /**
+     * Indicate if you release the end of file.
+     * @return True if EOF.
+     */
     boolean isEOF();
 }

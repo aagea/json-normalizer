@@ -19,6 +19,14 @@ package com.stronker.utils.normalizer.reader;
 
 import java.io.Reader;
 
+/**
+ * Interface to define new RawReader factories.
+ */
 public interface IRawReaderFactory {
+    /**
+     * Get a new RawReader.
+     * @param reader Original source reader.
+     * @return New instance of RawReader.
+     */
     IRawReader getInstance(Reader reader);
 }

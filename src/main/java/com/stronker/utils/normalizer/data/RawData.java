@@ -17,11 +17,19 @@
 
 package com.stronker.utils.normalizer.data;
 
+/**
+ * Not normalized information.
+ */
 public final class RawData {
     private final String name;
-    private final INormalData value;
+    private final IElement value;
 
-    public RawData(String name, INormalData value) {
+    /**
+     * Basic constructor.
+     * @param name String name.
+     * @param value Raw value.
+     */
+    public RawData(String name, IElement value) {
         this.name = name;
         this.value = value;
     }
@@ -30,7 +38,7 @@ public final class RawData {
         return this.name;
     }
 
-    public INormalData getValue() {
+    public IElement getValue() {
         return this.value;
     }
 }

@@ -15,4 +15,7 @@
  * specific language
  */
 
+/**
+ * This package contains all data information.
+ */
 package com.stronker.utils.normalizer.data;

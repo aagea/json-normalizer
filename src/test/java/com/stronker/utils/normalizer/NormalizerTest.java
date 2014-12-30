@@ -17,23 +17,31 @@
 
 package com.stronker.utils.normalizer;
 
-import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.data.StringNormalData;
-import com.stronker.utils.normalizer.pattern.PatternMock;
-import com.stronker.utils.normalizer.reader.IRawReader;
-import com.stronker.utils.normalizer.reader.RawReaderMock;
-import org.junit.Test;
-
-import java.io.IOException;
-import java.util.Map;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.stronker.utils.normalizer.data.RawData;
+import com.stronker.utils.normalizer.data.StringElement;
+import com.stronker.utils.normalizer.pattern.NullPatternMock;
+import com.stronker.utils.normalizer.pattern.SimplePatternMock;
+import com.stronker.utils.normalizer.reader.IRawReader;
+import com.stronker.utils.normalizer.reader.RawReaderMock;
+
+import java.io.EOFException;
+import java.io.IOException;
+import java.util.Map;
+
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class NormalizerTest {
+    private final static Logger LOG = LoggerFactory.getLogger(NormalizerTest.class);
+
     @Test
     public void instanceNormalizerTest() {
-        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration(new PatternMock());
+        LOG.info("Launching instanceNormalizerTest...");
+        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration(new SimplePatternMock());
         IRawReader reader = new RawReaderMock();
         Normalizer normalizer = new Normalizer(reader, normalizerConfiguration);
         assertEquals(normalizerConfiguration, normalizer.getConfiguration());
@@ -41,12 +49,37 @@ public class NormalizerTest {
     }
 
     @Test
-    public void simpleGetNext() throws IOException {
-        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration(new PatternMock());
+    public void simpleGetNextTest() throws IOException {
+        LOG.info("Launching simpleGetNextTest...");
+        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration(new SimplePatternMock());
         RawReaderMock reader = new RawReaderMock();
-        reader.add(new RawData("test1", new StringNormalData("test1")));
+        reader.add(new RawData("test1", new StringElement("test1")));
         Normalizer normalizer = new Normalizer(reader, normalizerConfiguration);
         Map<String, String> result = normalizer.getNext();
         assertTrue(result.containsKey("test1"));
+    }
+
+    @Test(expected = EOFException.class)
+    public void eofTest() throws IOException {
+        LOG.info("Launching eofTest... expected EOFException");
+        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration(new SimplePatternMock());
+        RawReaderMock reader = new RawReaderMock();
+        reader.add(new RawData("test1", new StringElement("test1")));
+        Normalizer normalizer = new Normalizer(reader, normalizerConfiguration);
+        Map<String, String> result = normalizer.getNext();
+        assertTrue(result.containsKey("test1"));
+        normalizer.getNext();
+    }
+
+    @Test
+    public void nullPatternTest() throws IOException {
+        LOG.info("Launching nullPatternTest...");
+        NormalizerConfiguration normalizerConfiguration = new NormalizerConfiguration();
+        normalizerConfiguration.getPatterns().add(new NullPatternMock());
+        RawReaderMock reader = new RawReaderMock();
+        reader.add(new RawData("test1", new StringElement("test1")));
+        Normalizer normalizer = new Normalizer(reader, normalizerConfiguration);
+        Map<String, String> result = normalizer.getNext();
+        assertTrue(result.isEmpty());
     }
 }

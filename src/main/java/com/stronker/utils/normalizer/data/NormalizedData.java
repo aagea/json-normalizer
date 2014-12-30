@@ -17,11 +17,18 @@
 
 package com.stronker.utils.normalizer.data;
 
-
+/**
+ * Data representation for normalized information.
+ */
 public final class NormalizedData {
     private final String key;
     private final String value;
 
+    /**
+     * Basic constructor.
+     * @param key Key String.
+     * @param value Value data.
+     */
     public NormalizedData(String key, String value) {
 
         this.key = key;

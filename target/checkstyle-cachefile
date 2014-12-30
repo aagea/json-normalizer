@@ -1,3 +1,19 @@
-#Mon Dec 29 19:27:23 CET 2014
+#Tue Dec 30 16:11:37 CET 2014
 /Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/package-info.java=1419875589000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/data/IElement.java=1419950940000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/function/IFunctionPatternFactory.java=1419943750000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/package-info.java=1419932666000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/IPattern.java=1419943769000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/value/package-info.java=1419943590000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/function/package-info.java=1419935803000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/reader/IRawReaderFactory.java=1419951607000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/name/package-info.java=1419943590000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/data/package-info.java=1419943881000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/name/INamePatternFactory.java=1419943750000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/reader/package-info.java=1419943566000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/name/INamePattern.java=1419943750000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/value/IValuePattern.java=1419951812000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/reader/IRawReader.java=1419951881000
 configuration*?=DDCF78AC701D24A0EEF366E906876A10346669AF
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/pattern/value/IValuePatternFactory.java=1419952258000
+/Users/strands/develop/json-normalizer/src/main/java/com/stronker/utils/normalizer/data/AbstractElement.java=1419951187000

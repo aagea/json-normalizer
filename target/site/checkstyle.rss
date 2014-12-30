@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2014</copyright>
     <item>
-      <title>File: 30,
-             Errors: 221,
+      <title>File: 36,
+             Errors: 131,
              Warnings: 0,
              Infos: 0
       </title>
@@ -55,21 +55,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  8
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.IPatternFunctionFactory.java">com/stronker/utils/normalizer/pattern/function/IPatternFunctionFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
+                  4
                 </td>
               </tr>
                           <tr>
@@ -83,7 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  20
+                  15
                 </td>
               </tr>
                           <tr>
@@ -97,12 +83,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  28
+                  17
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.BooleanNormalData.java">com/stronker/utils/normalizer/data/BooleanNormalData.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.AbstractElement.java">com/stronker/utils/normalizer/data/AbstractElement.java</a>
                 </td>
                 <td>
                   0
@@ -111,12 +97,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.AbstractPatternName.java">com/stronker/utils/normalizer/pattern/name/AbstractPatternName.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.IValuePattern.java">com/stronker/utils/normalizer/pattern/value/IValuePattern.java</a>
                 </td>
                 <td>
                   0
@@ -125,12 +111,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  8
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.ObjectNormalData.java">com/stronker/utils/normalizer/data/ObjectNormalData.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.ObjectElement.java">com/stronker/utils/normalizer/data/ObjectElement.java</a>
                 </td>
                 <td>
                   0
@@ -139,7 +125,35 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.package-info.java">com/stronker/utils/normalizer/pattern/function/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.reader.package-info.java">com/stronker/utils/normalizer/reader/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                           <tr>
@@ -153,12 +167,26 @@ under the License.
                   0
                 </td>
                 <td>
-                  21
+                  13
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.IPatternFunction.java">com/stronker/utils/normalizer/pattern/function/IPatternFunction.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.package-info.java">com/stronker/utils/normalizer/data/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.ListElement.java">com/stronker/utils/normalizer/data/ListElement.java</a>
                 </td>
                 <td>
                   0
@@ -172,7 +200,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.IPatternNameFactory.java">com/stronker/utils/normalizer/pattern/name/IPatternNameFactory.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.IElement.java">com/stronker/utils/normalizer/data/IElement.java</a>
                 </td>
                 <td>
                   0
@@ -181,35 +209,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.IPatternValue.java">com/stronker/utils/normalizer/pattern/value/IPatternValue.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.StringNormalData.java">com/stronker/utils/normalizer/data/StringNormalData.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
                 </td>
               </tr>
                           <tr>
@@ -223,12 +223,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.IPatternName.java">com/stronker/utils/normalizer/pattern/name/IPatternName.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.INamePattern.java">com/stronker/utils/normalizer/pattern/name/INamePattern.java</a>
                 </td>
                 <td>
                   0
@@ -237,7 +237,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.AbstractNamePattern.java">com/stronker/utils/normalizer/pattern/name/AbstractNamePattern.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
                 </td>
               </tr>
                           <tr>
@@ -251,21 +265,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.INormalData.java">com/stronker/utils/normalizer/data/INormalData.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
                 </td>
               </tr>
                           <tr>
@@ -284,7 +284,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.StrictPatternNameFactory.java">com/stronker/utils/normalizer/pattern/name/StrictPatternNameFactory.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.ToStringFunctionPatternFactory.java">com/stronker/utils/normalizer/pattern/function/ToStringFunctionPatternFactory.java</a>
                 </td>
                 <td>
                   0
@@ -293,21 +293,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  9
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.IPatternValueFactory.java">com/stronker/utils/normalizer/pattern/value/IPatternValueFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
+                  6
                 </td>
               </tr>
                           <tr>
@@ -321,7 +307,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  3
+                  0
                 </td>
               </tr>
                           <tr>
@@ -335,12 +321,68 @@ under the License.
                   0
                 </td>
                 <td>
-                  10
+                  8
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.AbstractNormalData.java">com/stronker/utils/normalizer/data/AbstractNormalData.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.package-info.java">com/stronker/utils/normalizer/pattern/name/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.AbstractValuePattern.java">com/stronker/utils/normalizer/pattern/value/AbstractValuePattern.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.IFunctionPatternFactory.java">com/stronker/utils/normalizer/pattern/function/IFunctionPatternFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.CompareTypeValuePatternFactory.java">com/stronker/utils/normalizer/pattern/value/CompareTypeValuePatternFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.IntElement.java">com/stronker/utils/normalizer/data/IntElement.java</a>
                 </td>
                 <td>
                   0
@@ -354,7 +396,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.AbstractPatternValue.java">com/stronker/utils/normalizer/pattern/value/AbstractPatternValue.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.IFunctionPattern.java">com/stronker/utils/normalizer/pattern/function/IFunctionPattern.java</a>
                 </td>
                 <td>
                   0
@@ -363,12 +405,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  8
+                  1
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.ListNormalData.java">com/stronker/utils/normalizer/data/ListNormalData.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.IValuePatternFactory.java">com/stronker/utils/normalizer/pattern/value/IValuePatternFactory.java</a>
                 </td>
                 <td>
                   0
@@ -377,21 +419,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.function.ToStringPatternFunctionFactory.java">com/stronker/utils/normalizer/pattern/function/ToStringPatternFunctionFactory.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  8
                 </td>
               </tr>
                           <tr>
@@ -405,12 +433,54 @@ under the License.
                   0
                 </td>
                 <td>
-                  10
+                  8
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.IntNormalData.java">com/stronker/utils/normalizer/data/IntNormalData.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.package-info.java">com/stronker/utils/normalizer/pattern/value/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.INamePatternFactory.java">com/stronker/utils/normalizer/pattern/name/INamePatternFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.StringElement.java">com/stronker/utils/normalizer/data/StringElement.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.name.StrictNamePatternFactory.java">com/stronker/utils/normalizer/pattern/name/StrictNamePatternFactory.java</a>
                 </td>
                 <td>
                   0
@@ -424,7 +494,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.value.CompareTypePatternValueFactory.java">com/stronker/utils/normalizer/pattern/value/CompareTypePatternValueFactory.java</a>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.data.BooleanElement.java">com/stronker/utils/normalizer/data/BooleanElement.java</a>
                 </td>
                 <td>
                   0
@@ -433,7 +503,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  17
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.stronker.utils.normalizer.pattern.package-info.java">com/stronker/utils/normalizer/pattern/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                           <tr>
@@ -461,7 +545,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  17
+                  14
                 </td>
               </tr>
                       </tbody>

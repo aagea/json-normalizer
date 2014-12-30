@@ -19,38 +19,69 @@ package com.stronker.utils.normalizer.pattern;
 
 import com.stronker.utils.normalizer.data.NormalizedData;
 import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.pattern.function.IPatternFunction;
-import com.stronker.utils.normalizer.pattern.name.IPatternName;
-import com.stronker.utils.normalizer.pattern.value.IPatternValue;
+import com.stronker.utils.normalizer.pattern.function.IFunctionPattern;
+import com.stronker.utils.normalizer.pattern.name.INamePattern;
+import com.stronker.utils.normalizer.pattern.value.IValuePattern;
 
-public class Pattern implements IPattern {
-    private final IPatternName patternName;
-    private final IPatternValue patternValue;
-    private final IPatternFunction patternFunction;
+/**
+ * Basic class to define transformation patterns.
+ */
+public final class Pattern implements IPattern {
+    private final INamePattern namePattern;
+    private final IValuePattern valuePattern;
+    private final IFunctionPattern functionPattern;
 
-    public Pattern(IPatternName patternName, IPatternValue patternValue, IPatternFunction patternFunction) {
-        this.patternName = patternName;
-        this.patternValue = patternValue;
-        this.patternFunction = patternFunction;
+    /**
+     * Pattern constructor.
+     *
+     * @param namePattern     Filter to name attributes.
+     * @param valuePattern    Filter to values and value types.
+     * @param functionPattern Transformation function.
+     */
+    public Pattern(INamePattern namePattern, IValuePattern valuePattern, IFunctionPattern functionPattern) {
+        this.namePattern = namePattern;
+        this.valuePattern = valuePattern;
+        this.functionPattern = functionPattern;
     }
 
-    public IPatternName getPatternName() {
-        return this.patternName;
+    /**
+     * Get the name pattern.
+     *
+     * @return Instance of name pattern.
+     */
+    public INamePattern getNamePattern() {
+        return this.namePattern;
     }
 
-    public IPatternValue getPatternValue() {
-        return this.patternValue;
+    /**
+     * Get the value pattern.
+     *
+     * @return Instance of value pattern.
+     */
+    public IValuePattern getValuePattern() {
+        return this.valuePattern;
     }
 
-    public IPatternFunction getPatternFunction() {
-        return this.patternFunction;
+    /**
+     * Get the function pattern.
+     *
+     * @return Instance of function pattern
+     */
+    public IFunctionPattern getFunctionPattern() {
+        return this.functionPattern;
     }
 
+    /**
+     * Transform raw data in normalized data, but the element must match the NamePattern and the ValuePattern.
+     *
+     * @param rawData Information no normalized.
+     * @return Information Normalized or null if not match the patterns.
+     */
     @Override
     public NormalizedData apply(RawData rawData) {
         NormalizedData result = null;
-        if (this.patternName.match(rawData.getName()) && this.patternValue.match(rawData.getValue())) {
-            result = this.patternFunction.call(rawData);
+        if (this.namePattern.match(rawData.getName()) && this.valuePattern.match(rawData.getValue())) {
+            result = this.functionPattern.call(rawData);
         }
         return result;
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.007" errors="0" skipped="0" tests="1" name="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest">
+<testsuite failures="0" time="0.004" errors="0" skipped="0" tests="8" name="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib"/>
@@ -67,5 +67,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.007" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="newIstanceTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="instanceJsonArrayRawReaderFactoryTest"/>
+  <testcase time="0.001" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="emptyArrayJsonTest"/>
+  <testcase time="0.002" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="complexArrayJsonTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="notArrayJsonTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="badFormatJsonTest"/>
+  <testcase time="0.001" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="basicArrayJsonTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="multiLevelJsonTest"/>
+  <testcase time="0" classname="com.stronker.utils.normalizer.reader.JsonArrayRawReaderFactoryTest" name="multiListJsonTest"/>
 </testsuite>

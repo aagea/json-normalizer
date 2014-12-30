@@ -20,6 +20,15 @@ package com.stronker.utils.normalizer.pattern;
 import com.stronker.utils.normalizer.data.NormalizedData;
 import com.stronker.utils.normalizer.data.RawData;
 
+/**
+ * Interface to define a new Pattern.
+ */
 public interface IPattern {
+    /**
+     * Apply function pattern.
+     *
+     * @param rawData Information no normalized.
+     * @return Information Normalized, null if is impossible normalized.
+     */
     NormalizedData apply(RawData rawData);
 }

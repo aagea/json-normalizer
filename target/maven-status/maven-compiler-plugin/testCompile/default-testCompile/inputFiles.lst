@@ -1,4 +1,13 @@
-/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/reader/RawReaderMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/data/RawDataMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/value/ValuePatternMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/value/CompareTypeValuePatternFactoryTest.java
 /Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/reader/JsonArrayRawReaderFactoryTest.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/name/StrictNamePatternFactoryTest.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/reader/RawReaderMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/SimplePatternMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/PatternTest.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/NullPatternMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/function/ToStringFunctionPatternFactoryTest.java
 /Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/NormalizerTest.java
-/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/PatternMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/name/NamePatternMock.java
+/Users/strands/develop/json-normalizer/src/test/java/com/stronker/utils/normalizer/pattern/function/FunctionPatternMock.java

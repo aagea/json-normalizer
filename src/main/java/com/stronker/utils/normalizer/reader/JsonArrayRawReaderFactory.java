@@ -19,23 +19,27 @@ package com.stronker.utils.normalizer.reader;
 
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
-import com.stronker.utils.normalizer.data.BooleanNormalData;
-import com.stronker.utils.normalizer.data.INormalData;
-import com.stronker.utils.normalizer.data.IntNormalData;
-import com.stronker.utils.normalizer.data.ListNormalData;
-import com.stronker.utils.normalizer.data.ObjectNormalData;
+import com.stronker.utils.normalizer.data.BooleanElement;
+import com.stronker.utils.normalizer.data.IElement;
+import com.stronker.utils.normalizer.data.IntElement;
+import com.stronker.utils.normalizer.data.ListElement;
+import com.stronker.utils.normalizer.data.ObjectElement;
 import com.stronker.utils.normalizer.data.RawData;
-import com.stronker.utils.normalizer.data.StringNormalData;
+import com.stronker.utils.normalizer.data.StringElement;
 
 import java.io.EOFException;
 import java.io.IOException;
+import java.io.InvalidObjectException;
 import java.io.Reader;
 import java.util.LinkedList;
 import java.util.List;
 
-public class JsonArrayRawReaderFactory implements IRawReaderFactory {
+/**
+ * Factory of JsonArrayRawReader.
+ */
+public final class JsonArrayRawReaderFactory implements IRawReaderFactory {
 
-    public JsonArrayRawReaderFactory(){
+    public JsonArrayRawReaderFactory() {
 
     }
 
@@ -44,6 +48,9 @@ public class JsonArrayRawReaderFactory implements IRawReaderFactory {
         return new JsonArrayRawReader(reader);
     }
 
+    /**
+     * Read information in streaming of an array Json usin GSON library.
+     */
     private static final class JsonArrayRawReader extends AbstractRawReader {
         private final JsonReader jsonReader;
         private boolean init;
@@ -55,22 +62,21 @@ public class JsonArrayRawReaderFactory implements IRawReaderFactory {
         }
 
         @Override
-        public Reader getReader() {
-            return super.getReader();
-        }
-
-        @Override
-        public ObjectNormalData getNextElement() throws IOException {
-            ObjectNormalData result = null;
+        public ObjectElement getNextElement() throws IOException {
+            ObjectElement result = null;
             if (!this.init) {
+                if (this.jsonReader.peek() != JsonToken.BEGIN_ARRAY) {
+                    throw new InvalidObjectException("Expect JSON_ARRAY");
+                }
                 this.jsonReader.beginArray();
                 this.init = true;
+            }
+            if (this.eof) {
+                throw new EOFException();
             }
 
             if (this.jsonReader.hasNext()) {
                 result = this.nextObject();
-            } else {
-                throw new EOFException();
             }
 
             if (!this.jsonReader.hasNext()) {
@@ -81,24 +87,24 @@ public class JsonArrayRawReaderFactory implements IRawReaderFactory {
 
         }
 
-        private ObjectNormalData nextObject() throws IOException {
-            List<RawData> result = new LinkedList<RawData>();
+        private ObjectElement nextObject() throws IOException {
+            final List<RawData> result = new LinkedList<RawData>();
             this.jsonReader.beginObject();
             while (this.jsonReader.hasNext()) {
-                RawData element = this.nextElement();
+                final RawData element = this.nextElement();
                 if (element != null) {
                     result.add(element);
                 }
             }
             this.jsonReader.endObject();
-            return new ObjectNormalData(result);
+            return new ObjectElement(result);
         }
 
-        private ListNormalData nextArray() throws IOException {
-            List<INormalData> result = new LinkedList<INormalData>();
+        private ListElement nextArray() throws IOException {
+            final List<IElement> result = new LinkedList<IElement>();
             this.jsonReader.beginArray();
             while (this.jsonReader.hasNext()) {
-                JsonToken token = this.jsonReader.peek();
+                final JsonToken token = this.jsonReader.peek();
                 switch (token) {
                     case BEGIN_ARRAY:
                         result.add(this.nextArray());
@@ -107,27 +113,28 @@ public class JsonArrayRawReaderFactory implements IRawReaderFactory {
                         result.add(this.nextObject());
                         break;
                     case STRING:
-                        result.add(new StringNormalData(this.jsonReader.nextString()));
+                        result.add(new StringElement(this.jsonReader.nextString()));
                         break;
                     case NUMBER:
-                        result.add(new IntNormalData(this.jsonReader.nextInt()));
+                        result.add(new IntElement(this.jsonReader.nextInt()));
                         break;
                     case BOOLEAN:
-                        result.add(new BooleanNormalData(this.jsonReader.nextBoolean()));
+                        result.add(new BooleanElement(this.jsonReader.nextBoolean()));
                         break;
                     case NULL:
+                        this.jsonReader.nextNull();
                         break;
                     default:
                         throw new IllegalArgumentException();
                 }
             }
             this.jsonReader.endArray();
-            return new ListNormalData(result);
+            return new ListElement(result);
         }
 
         private RawData nextElement() throws IOException {
-            String name = this.jsonReader.nextName();
-            JsonToken token = this.jsonReader.peek();
+            final String name = this.jsonReader.nextName();
+            final JsonToken token = this.jsonReader.peek();
             RawData result = null;
             switch (token) {
                 case BEGIN_ARRAY:
@@ -137,15 +144,16 @@ public class JsonArrayRawReaderFactory implements IRawReaderFactory {
                     result = new RawData(name, this.nextObject());
                     break;
                 case STRING:
-                    result = new RawData(name, new StringNormalData(this.jsonReader.nextString()));
+                    result = new RawData(name, new StringElement(this.jsonReader.nextString()));
                     break;
                 case NUMBER:
-                    result = new RawData(name, new IntNormalData(this.jsonReader.nextInt()));
+                    result = new RawData(name, new IntElement(this.jsonReader.nextInt()));
                     break;
                 case BOOLEAN:
-                    result = new RawData(name, new BooleanNormalData(this.jsonReader.nextBoolean()));
+                    result = new RawData(name, new BooleanElement(this.jsonReader.nextBoolean()));
                     break;
                 case NULL:
+                    this.jsonReader.nextNull();
                     break;
                 default:
                     throw new IllegalArgumentException();

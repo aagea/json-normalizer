@@ -17,27 +17,33 @@
 
 package com.stronker.utils.normalizer.reader;
 
-import com.stronker.utils.normalizer.data.ObjectNormalData;
+import com.stronker.utils.normalizer.data.ObjectElement;
 
 import java.io.IOException;
 import java.io.Reader;
 
-
+/**
+ * Helper to create new RawReader.
+ */
 public abstract class AbstractRawReader implements IRawReader {
 
     private final Reader reader;
 
+    /**
+     * Basic constructor.
+     * @param reader Original source reader.
+     */
     public AbstractRawReader(Reader reader) {
 
         this.reader = reader;
     }
 
-    public Reader getReader() {
+    public final Reader getReader() {
         return this.reader;
     }
 
     @Override
-    public abstract ObjectNormalData getNextElement() throws IOException;
+    public abstract ObjectElement getNextElement() throws IOException;
 
     @Override
     public abstract boolean isEOF();

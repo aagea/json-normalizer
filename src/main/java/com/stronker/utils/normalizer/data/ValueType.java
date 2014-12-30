@@ -17,7 +17,9 @@
 
 package com.stronker.utils.normalizer.data;
 
-
+/**
+ * Different element type.
+ */
 public enum ValueType {
     ANY("any", null),
     SIMPLE_TYPE("simple-type", ANY),
@@ -27,26 +29,26 @@ public enum ValueType {
 
     OBJECT("object", ANY),
 
-    LIST("list", ANY, ANY);
+    LIST("list", ANY);
 
 
     private final ValueType parent;
-    private final ValueType generic;
     private final String signature;
 
-    ValueType(String signature, ValueType parent) {
-        this(signature, parent, null);
-    }
 
-    ValueType(String signature, ValueType parent, ValueType generic) {
+    ValueType(String signature, ValueType parent) {
         this.signature = signature;
         this.parent = parent;
-        this.generic = generic;
     }
 
+    /**
+     * Convert a String in a ValueType.
+     * @param signature Sign of type.
+     * @return Selected ValueType.
+     */
     public static ValueType parse(String signature) {
         for (ValueType valueType : ValueType.values()) {
-            if (valueType.getSignature().equals(signature)) {
+            if (valueType.getSignature().equalsIgnoreCase(signature)) {
                 return valueType;
             }
         }
@@ -55,10 +57,6 @@ public enum ValueType {
 
     public ValueType getParent() {
         return this.parent;
-    }
-
-    public ValueType getGeneric() {
-        return this.generic;
     }
 
     public String getSignature() {

@@ -19,23 +19,24 @@ package com.stronker.utils.normalizer;
 
 
 import com.stronker.utils.normalizer.data.NormalizedData;
-import com.stronker.utils.normalizer.data.ObjectNormalData;
+import com.stronker.utils.normalizer.data.ObjectElement;
 import com.stronker.utils.normalizer.data.RawData;
 import com.stronker.utils.normalizer.pattern.IPattern;
 import com.stronker.utils.normalizer.reader.IRawReader;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Main class to normalize documents.
  */
 public final class Normalizer {
-    private static final Logger LOG= LoggerFactory.getLogger(Normalizer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Normalizer.class);
 
     private final IRawReader reader;
     private final NormalizerConfiguration configuration;
@@ -82,11 +83,11 @@ public final class Normalizer {
             throw new EOFException();
         }
         LOG.debug("---> Get next element.");
-        final ObjectNormalData element = this.reader.getNextElement();
+        final ObjectElement element = this.reader.getNextElement();
         return this.normalize(element);
     }
 
-    private Map<String, String> normalize(ObjectNormalData element) {
+    private Map<String, String> normalize(ObjectElement element) {
         final Map<String, String> result = new HashMap<String, String>(element.getValue().size());
         for (RawData rawData : element.getValue()) {
             final NormalizedData data = this.normalize(rawData);
@@ -94,7 +95,7 @@ public final class Normalizer {
                 result.put(data.getKey(), data.getValue());
             }
         }
-        LOG.debug("Result: {} Processed: {}",result.size(),element.getValue().size());
+        LOG.debug("Result: {} Processed: {}", result.size(), element.getValue().size());
         return result;
     }
 
